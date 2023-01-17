@@ -1,0 +1,27 @@
+.bg-work {
+    background-color: var(--primary-work);
+}
+
+.bg-play {
+    background-color: var(--primary-play);
+}
+
+.bg-study {
+    background-color: var(--primary-study);
+}
+
+.bg-exercise {
+    background-color: var(--primary-exercise);
+}
+
+.bg-work {
+    background-color: var(--primary-work);
+}
+
+.bg-social {
+    background-color: var(--primary-social);
+}
+
+.bg-selfcare {
+    background-color: var(--primary-selfcare);
+}
