@@ -1,0 +1,32 @@
+ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+li {
+    cursor: pointer;
+}
+
+li:hover {
+    color: pink;
+}
+
+.container {
+    border-radius: 25px;
+    border: 2px solid red;
+}
+
+.profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 25px;
+    border: 2px solid red;
+}
+
+.selected-timeframe {
+    color: black;
+}

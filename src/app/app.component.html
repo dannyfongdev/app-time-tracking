@@ -1,15 +1,10 @@
 <div class="outer-container">
 	<div class="dashboard-container">
 		<div class="timeframe-selector">
-			<app-timeframe-selector />
+			<app-timeframe-selector [(timeframe)]="timeframe"/>
 		</div>
 		<div class="timesheet-grid">
-			<app-category-card [title]=" 'Work' "/>
-			<app-category-card [title]=" 'Play' "/>
-			<app-category-card [title]=" 'Study' "/>
-			<app-category-card [title]=" 'Excercise' "/>
-			<app-category-card [title]=" 'Social' "/>
-			<app-category-card [title]=" 'Self Care' "/>
+			<app-category-card *ngFor="let category of categories" [title]="category" [timeframe]="timeframe"/>
 		</div>
 	</div>
-</div>;
+</div>

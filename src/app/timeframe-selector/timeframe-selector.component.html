@@ -1,1 +1,18 @@
-<p>timeframe-selector works!</p>
+<div class="container">
+	<div class="profile">
+		<div>
+			<img src="assets/images/image-jeremy.png" alt="Jeremy Robson" />
+		</div>
+		<div>
+			<p>Report for</p>
+			<h1>Jeremy Robson</h1>
+		</div>
+	</div>
+	<div>
+		<ul>
+			<li [ngClass]="getTextColor('Daily')" (click)="setTimeframe('Daily')">Daily</li>
+			<li [ngClass]="getTextColor('Weekly')" (click)="setTimeframe('Weekly')">Weekly</li>
+			<li [ngClass]="getTextColor('Monthly')" (click)="setTimeframe('Monthly')">Monthly</li>
+		</ul>
+	</div>
+</div>
