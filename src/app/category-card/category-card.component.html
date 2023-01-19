@@ -1,3 +1,10 @@
-<h3 [ngClass]="getBgColor()">{{ title }}</h3>
-<h2>{{ getCurrentHours() }}</h2>
-<p>{{ getPreviousHours() }}</p>
+<div class="container" [ngClass]="getBgColor()">
+  <div class="icon-bar" >
+    <img src="assets/images/icon-work.svg" alt="icon">
+  </div>
+  <div class="main-card">
+    <h3>{{ title }}</h3>
+    <h2>{{ getCurrentHours() }}</h2>
+    <p>{{ getPreviousHours() }}</p>
+  </div>
+</div>

@@ -13,6 +13,13 @@
     --neutral-4: hsl(236, 100%, 87%);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Rubik', sans-serif;
+    background-color: var(--neutral-1);
 }

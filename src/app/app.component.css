@@ -1,11 +1,14 @@
 .dashboard-container {
     display: flex;
     flex-direction: column;
+    gap: 1.3rem;
+    max-width: 325px;
+    margin: 25px auto 0;
 }
 
 
 .timeframe-selector {
-    color: blue;
+    color: inherit;
 }
 
 
@@ -13,8 +16,7 @@
 .timesheet-grid {
     display: grid;
     grid-template-columns: 1fr;
-    color: red;
-    background-color: yellow;
+    gap: 1.3rem;
 }
 
 @media (min-width: 768px) {

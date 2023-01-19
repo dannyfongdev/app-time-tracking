@@ -1,8 +1,10 @@
 ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1rem;
     list-style: none;
+    max-width: 270px;
+    margin: 0 auto;
 }
 
 li {
@@ -10,23 +12,49 @@ li {
 }
 
 li:hover {
-    color: pink;
+    color: white;
+}
+
+img {
+    width: 70px;
+    height: 70px;
+    border: 3px solid white;
+    border-radius: 100%;
+}
+
+h1 {
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+p {
+    font-size: 0.9rem;
+    color: var(--neutral-4);
+    margin-bottom: 0.2rem;
 }
 
 .container {
+    background-color: var(--neutral-2);
     border-radius: 25px;
-    border: 2px solid red;
 }
 
 .profile {
+    padding: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     border-radius: 25px;
-    border: 2px solid red;
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.timeframe-select {
+    padding: 1.4rem;
+    color: var(--neutral-3);
+    font-size: 1.2rem;
 }
 
 .selected-timeframe {
-    color: black;
+    color: white;
 }

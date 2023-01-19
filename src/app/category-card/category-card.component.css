@@ -1,3 +1,23 @@
+.container {
+    position: relative;
+    color: white;
+    border-radius: 25px;
+}
+
+.icon-bar {
+    display: flex;
+    justify-content: end;
+}
+
+.main-card {
+    background-color: var(--neutral-2);
+    padding: 25px;
+    border-radius: 25px;
+    margin-top: -10px;
+    z-index: 10;
+}
+
+
 .bg-work {
     background-color: var(--primary-work);
 }
