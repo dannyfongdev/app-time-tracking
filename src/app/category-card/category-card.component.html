@@ -3,8 +3,15 @@
     <img src="assets/images/icon-work.svg" alt="icon">
   </div>
   <div class="main-card">
-    <h3>{{ title }}</h3>
-    <h2>{{ getCurrentHours() }}</h2>
-    <p>{{ getPreviousHours() }}</p>
+    <div class="category-div">
+      <h3>{{ title }}</h3>
+      <div>
+        <img src="assets/images/icon-ellipsis.svg" alt="icon">
+      </div>
+    </div>
+    <div class="hours-div">
+      <h2>{{ getCurrentHours() }}</h2>
+      <p>{{ getPreviousHours() }}</p>
+    </div>
   </div>
 </div>

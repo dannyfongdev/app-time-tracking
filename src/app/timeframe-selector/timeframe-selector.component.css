@@ -35,7 +35,7 @@ p {
 
 .container {
     background-color: var(--neutral-2);
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 .profile {
@@ -44,7 +44,7 @@ p {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    border-radius: 25px;
+    border-radius: 15px;
     background-color: var(--primary-blue);
     color: white;
 }
@@ -57,4 +57,48 @@ p {
 
 .selected-timeframe {
     color: white;
+}
+
+@media (min-width: 768px) {
+
+    .container {
+        border-radius: 15px;;
+    }
+
+    .profile {
+        height: 355px;
+        width: 255px;
+        padding: 2rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 15px
+    }
+
+    ul {
+        flex-direction: column;
+        justify-content: center;
+        height: 120px;
+    }
+
+    .image-div {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+    }
+
+    .content-div {
+        width: 100%;
+        text-align: left;
+    }
+
+
+    img {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
 }

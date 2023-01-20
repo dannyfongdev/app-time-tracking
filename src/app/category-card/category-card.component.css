@@ -1,22 +1,51 @@
 .container {
-    position: relative;
+    height: 160px;
     color: white;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 .icon-bar {
+    height: 40px;
     display: flex;
     justify-content: end;
 }
 
 .main-card {
+    height: 122px;
     background-color: var(--neutral-2);
     padding: 25px;
-    border-radius: 25px;
-    margin-top: -10px;
-    z-index: 10;
+    border-radius: 15px;
 }
 
+.category-div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.hours-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* category, e.g. Work */
+h3 { 
+    font-weight: 400;
+}
+
+/* hours */
+h2 {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+/* previous hours */
+p {
+    font-weight: 300;;
+    font-size: 0.9rem;
+    color: var(--neutral-4)
+}
 
 .bg-work {
     background-color: var(--primary-work);
@@ -44,4 +73,29 @@
 
 .bg-selfcare {
     background-color: var(--primary-selfcare);
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 255px;
+        height: 248px;
+        border-radius: 15px;
+    }
+
+    .main-card {
+        height: 200px;
+        margin-top: 11px;
+        border-radius: 15px;
+        padding: 2rem;
+    }
+
+    .hours-div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    h2 {
+        font-size: 3.5rem;
+    }
 }
