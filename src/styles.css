@@ -24,7 +24,7 @@ body {
     background-color: var(--neutral-1);
 }
 
-@media (min-height: 520px) {
+@media (min-height: 520px) and (min-width: 768px) {
     body {
         display: flex;
         flex-direction: column;

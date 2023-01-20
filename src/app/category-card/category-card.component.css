@@ -5,9 +5,7 @@
 }
 
 .icon-bar {
-    height: 40px;
-    display: flex;
-    justify-content: end;
+    height: 35px;
 }
 
 .main-card {
@@ -15,6 +13,12 @@
     background-color: var(--neutral-2);
     padding: 25px;
     border-radius: 15px;
+    margin-top: 5px;
+}
+
+.main-card:hover {
+    background-color: hsl(235, 46%, 35%); /* brighten neutral-2 just a bit */
+    cursor: pointer;
 }
 
 .category-div {
@@ -47,32 +51,56 @@ p {
     color: var(--neutral-4)
 }
 
+/* ellipsis */
+svg {
+    fill: #BBC0FF;
+    fill-rule: "evenodd";
+  }
+  svg:hover {
+    fill:white;
+    cursor: pointer;
+  }
+
 .bg-work {
     background-color: var(--primary-work);
+    background-image: url('../../assets/images/icon-work.svg');
+    background-repeat: no-repeat;
+    background-position: top -10px right 12px;
 }
 
 .bg-play {
     background-color: var(--primary-play);
+    background-image: url('../../assets/images/icon-play.svg');
+    background-repeat: no-repeat;
+    background-position: top -4px right 12px;
 }
 
 .bg-study {
     background-color: var(--primary-study);
+    background-image: url('../../assets/images/icon-study.svg');
+    background-repeat: no-repeat;
+    background-position: top -5px right 12px;
 }
 
 .bg-exercise {
     background-color: var(--primary-exercise);
-}
-
-.bg-work {
-    background-color: var(--primary-work);
+    background-image: url('../../assets/images/icon-exercise.svg');
+    background-repeat: no-repeat;
+    background-position: top 0px right 12px;
 }
 
 .bg-social {
     background-color: var(--primary-social);
+    background-image: url('../../assets/images/icon-social.svg');
+    background-repeat: no-repeat;
+    background-position: top -14px right 12px;
 }
 
 .bg-selfcare {
     background-color: var(--primary-selfcare);
+    background-image: url('../../assets/images/icon-self-care.svg');
+    background-repeat: no-repeat;
+    background-position: top -12px right 12px;
 }
 
 @media (min-width: 768px) {
@@ -84,7 +112,7 @@ p {
 
     .main-card {
         height: 200px;
-        margin-top: 11px;
+        margin-top: 16px;
         border-radius: 15px;
         padding: 2rem;
     }
