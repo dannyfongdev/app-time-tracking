@@ -1,7 +1,8 @@
-import { NonNullAssert } from "@angular/compiler";
 import { Component, Input } from "@angular/core";
-import { Timesheet } from "../data";
 import data from "./data.json";
+import { Category, Timeframe } from "../types"
+
+
 
 @Component({
 	selector: "app-category-card",
@@ -9,13 +10,15 @@ import data from "./data.json";
 	styleUrls: ["./category-card.component.css"]
 })
 export class CategoryCardComponent {
-	@Input() title = "";
-	@Input() timeframe = "";
+	@Input() title:Category = "Work";
+	@Input() timeframe:Timeframe = "Weekly";
 	currHours = 0;
 	prevHours = 0;
 
 	timesheets = data;
-	timesheet = data.filter(ts => {return(ts.title == this.title)});
+	timesheet = data.filter(ts => {
+		return ts.title == this.title;
+	});
 
 	getBgColor() {
 		switch (this.title) {
@@ -25,7 +28,7 @@ export class CategoryCardComponent {
 				return "bg-play";
 			case "Study":
 				return "bg-study";
-			case "Excercise":
+			case "Exercise":
 				return "bg-exercise";
 			case "Social":
 				return "bg-social";
@@ -37,10 +40,10 @@ export class CategoryCardComponent {
 	}
 
 	getCurrentHours() {
-    return this.currHours + "hrs"
-  }
-  
-  getPreviousHours() {
+		return this.currHours + "hrs";
+	}
+
+	getPreviousHours() {
 		switch (this.timeframe) {
 			case "Daily":
 				return "Yesterday - " + this.prevHours + "hrs";
@@ -53,36 +56,34 @@ export class CategoryCardComponent {
 		}
 	}
 
-  setHours() {
-    // console.log("Setting hours for", this.title);
-		const timesheet = data.find(ts => (ts.title == this.title));
-    if (timesheet) {
-      switch (this.timeframe) {
-        case "Daily":
-          this.currHours = timesheet.timeframes.daily.current;
-          this.prevHours = timesheet.timeframes.daily.previous;
-          break;
-        case "Weekly":
-          this.currHours = timesheet.timeframes.weekly.current;
-          this.prevHours = timesheet.timeframes.weekly.previous;
-          break;
-        case "Monthly":
-          this.currHours = timesheet.timeframes.monthly.current;
-          this.prevHours = timesheet.timeframes.monthly.previous;
-          break;
-        default:
-          console.log("Timeframe not found:", this.timeframe)
-      }
-    } else {
-      console.log("Title note found:",this.title)
-    }
-  }
-
-	ngOnInit() {
-    this.setHours();
+	setHours() {
+		// console.log("Setting hours for", this.title);
+		const timesheet = data.find(ts => ts.title == this.title);
+		if (timesheet) {
+			switch (this.timeframe) {
+				case "Daily":
+					this.currHours = timesheet.timeframes.daily.current;
+					this.prevHours = timesheet.timeframes.daily.previous;
+					break;
+				case "Weekly":
+					this.currHours = timesheet.timeframes.weekly.current;
+					this.prevHours = timesheet.timeframes.weekly.previous;
+					break;
+				case "Monthly":
+					this.currHours = timesheet.timeframes.monthly.current;
+					this.prevHours = timesheet.timeframes.monthly.previous;
+					break;
+			}
+		} else {
+			console.log("Title note found:", this.title);
+		}
 	}
 
-  ngOnChanges () {
-    this.setHours();
-  }
+	ngOnInit() {
+		this.setHours();
+	}
+
+	ngOnChanges() {
+		this.setHours();
+	}
 }

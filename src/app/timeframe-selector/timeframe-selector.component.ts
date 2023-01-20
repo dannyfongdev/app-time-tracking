@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Timeframe } from "../types"
 
 @Component({
 	selector: "app-timeframe-selector",
@@ -6,8 +7,8 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 	styleUrls: ["./timeframe-selector.component.css"]
 })
 export class TimeframeSelectorComponent {
-	@Input() timeframe = "Weekly";
-	@Output() timeframeChange = new EventEmitter<string>();
+	@Input() timeframe:Timeframe = "Weekly";
+	@Output() timeframeChange = new EventEmitter<Timeframe>();
 
 	getTextColor(label: string) {
 		if (label == this.timeframe) {
@@ -17,7 +18,7 @@ export class TimeframeSelectorComponent {
 		}
 	}
 
-	setTimeframe(tf: string) {
+	setTimeframe(tf: Timeframe) {
 		this.timeframe = tf;
 		this.timeframeChange.emit(this.timeframe);
 	}

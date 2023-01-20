@@ -1,5 +1,6 @@
+import { Time } from "@angular/common";
 import { Component } from "@angular/core";
-// import { Data, Timesheet } from "./data";
+import { Category, Timeframe} from "./types"
 
 @Component({
 	selector: "app-root",
@@ -7,8 +8,8 @@ import { Component } from "@angular/core";
 	styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-	timeframe = "Daily";
-  categories = [
+	timeframe:Timeframe = "Weekly";
+  categories:Category[] = [
     "Work",
     "Play",
     "Study",
@@ -16,16 +17,5 @@ export class AppComponent {
     "Social",
     "Self Care"
   ]
-	// d = new Data();
-  // data = this.d.getData();
-	// titles: string[] = [];
-  // timesheets: Timesheet[] = [];
 
-	public ngOnInit() {
-    // this.d.getData();
-		// this.timesheets = this.d.getTimesheets();
-		// this.titles = this.d.getTitles();
-    // console.log("don't like async")
-    // console.log(this.timesheets)
-	}
 }
