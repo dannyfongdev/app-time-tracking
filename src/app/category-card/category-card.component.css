@@ -55,7 +55,6 @@ p {
 /* ellipsis */
 svg {
     fill: #BBC0FF;
-    fill-rule: "evenodd";
   }
   svg:hover {
     fill:white;
