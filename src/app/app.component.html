@@ -1,4 +1,4 @@
-<div class="outer-container">
+<main class="outer-container">
 	<div class="dashboard-container">
 		<div class="timeframe-selector">
 			<app-timeframe-selector [(timeframe)]="timeframe"/>
@@ -7,4 +7,4 @@
 			<app-category-card *ngFor="let category of categories" [title]="category" [timeframe]="timeframe"/>
 		</div>
 	</div>
-</div>
+</main>
