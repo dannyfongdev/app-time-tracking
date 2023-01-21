@@ -34,12 +34,13 @@
 }
 
 /* category, e.g. Work */
-h3 { 
+h2 {
     font-weight: 400;
+    font-size: 1.2rem;
 }
 
 /* hours */
-h2 {
+h3 { 
     font-weight: 300;
     font-size: 2rem;
 }
@@ -123,7 +124,7 @@ svg {
         gap: 1rem;
     }
 
-    h2 {
+    h3 {
         font-size: 3.5rem;
     }
 }
